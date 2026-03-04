@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | ANAY Premium Stone</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Montserrat:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            overflow-x: hidden;
+            max-width: 100vw;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background: #f6f3ed;
+            color: #2c2c2c;
+            line-height: 1.8;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 8%;
+            background: white;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            letter-spacing: 3px;
+        }
+
+        nav a {
+            text-decoration: none;
+            margin-left: 35px;
+            font-size: 13px;
+            color: #2c2c2c;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 140px 8%;
+            text-align: center;
+            background: white;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 50px;
+        }
+
+        /* Contact Info Section */
+        .contact-info {
+            padding: 100px 8%;
+            text-align: center;
+        }
+
+        .contact-info h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        .contact-info p {
+            margin: 8px 0;
+            font-weight: 300;
+        }
+
+        /* Buttons */
+        .button-group {
+            margin-top: 40px;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 16px 40px;
+            text-decoration: none;
+            font-size: 13px;
+            letter-spacing: 2px;
+            border: 1px solid #2b2b2b;
+            background: #2b2b2b;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .contact-btn:hover {
+            background: transparent;
+            color: #2b2b2b;
+        }
+
+        /* Requirement Button */
+        .requirement-btn {
+            margin-top: 60px;
+            display: inline-block;
+            padding: 18px 50px;
+            border: 1px solid #2b2b2b;
+            text-decoration: none;
+            font-size: 13px;
+            letter-spacing: 2px;
+            color: #2b2b2b;
+            cursor: pointer;
+        }
+
+        /* Form Section (Hidden Initially) */
+        .form-section {
+            display: none;
+            padding: 100px 8%;
+            background: white;
+        }
+
+        form {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #ccc;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        textarea {
+            height: 130px;
+            resize: none;
+        }
+
+        .submit-btn {
+            padding: 16px 40px;
+            background: #2b2b2b;
+            color: white;
+            border: none;
+            cursor: pointer;
+            letter-spacing: 2px;
+        }
+
+        /* Footer */
+        .footer {
+            background: #1c1c1c;
+            color: #aaa;
+            text-align: center;
+            padding: 40px;
+            font-size: 13px;
+        }
+
+        /* Dropdown CSS */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown .dropbtn {
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 13px;
+            color: inherit;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0;
+            font-family: inherit;
+            outline: none;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #ffffff;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+            top: 100%;
+            left: 30px;
+            border-radius: 4px;
+        }
+
+        .dropdown-content a {
+            color: #111 !important;
+            padding: 12px 16px !important;
+            text-decoration: none;
+            display: block !important;
+            margin: 0 !important;
+            text-align: left;
+            font-size: 13px;
+            opacity: 1 !important;
+            border-bottom: 1px solid #eee;
+        }
+
+        .dropdown-content a:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f5f5f5 !important;
+            color: #000 !important;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+
+
+    <script>
+        function showForm() {
+            document.getElementById("formSection").style.display = "block";
+            window.scrollTo({
+                top: document.getElementById("formSection").offsetTop,
+                behavior: "smooth"
+            });
+        }
+    </script>
+    <!-- Web3Forms Script -->
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="logo"><a href="index.html" style="color:inherit; text-decoration:none;">ANAY PREMIUM STONE</a></div>
+        <nav style="display: flex; align-items: center;">
+            <a href="index.html">Home</a>
+            <a href="About.html">About</a>
+            <div class="dropdown">
+                <a href="Products.html" class="dropbtn">Products ▼</a>
+                <div class="dropdown-content">
+                    <a href="Bansi Paharpur Pink.html">Bansi Paharpur Pink</a>
+                    <a href="Dholpur Beige.html">Dholpur Beige</a>
+                    <a href="Dholpur red.html">Dholpur Red</a>
+                </div>
+            </div>
+            <a href="Application.html">Applications</a>
+            <a href="infrastructure.html">Infrastructure</a>
+            <a href="Technical.html">Technical</a>
+            <a href="Contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Contact ANAY Premium Stone</h1>
+    </section>
+
+    <section class="contact-info">
+
+        <h2>Direct Contact</h2>
+
+        <p><strong>Ashu Mangal</strong></p>
+        <p>ANAY Premium Stone</p>
+        <p>Sarmathura, Dholpur, Rajasthan, India</p>
+        <p>Email: anaypremiumstone@gmail.com</p>
+        <p>Phone / WhatsApp: +91 82331 76499</p>
+        <p>Website: www.anaypremiumstone.com</p>
+
+        <div class="button-group">
+            <a class="contact-btn" href="tel:+918233176499">CALL NOW</a>
+            <a class="contact-btn" href="https://wa.me/918233176499" target="_blank">WHATSAPP</a>
+        </div>
+
+        <div>
+            <a class="requirement-btn" onclick="showForm()">SUBMIT YOUR REQUIREMENT</a>
+        </div>
+
+    </section>
+
+    <section class="form-section" id="formSection">
+
+        <form action="https://api.web3forms.com/submit" method="POST" id="enquiryForm">
+
+            <!-- Replace with your actual Web3Forms Access Key -->
+            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+
+            <!-- Optional: Redirect user back to contact page after submission -->
+            <!-- <input type="hidden" name="redirect" value="https://yourwebsite.com/Contact.html"> -->
+
+            <!-- Optional: Subject of the email you receive -->
+            <input type="hidden" name="subject" value="New Inquiry from ANAY Premium Stone Website">
+
+            <div class="form-group">
+                <input type="text" id="fullName" name="name" placeholder="Full Name" required>
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="companyName" name="company" placeholder="Company Name">
+            </div>
+
+            <div class="form-group">
+                <input type="email" id="emailAddress" name="email" placeholder="Email Address" required>
+            </div>
+
+            <div class="form-group">
+                <select id="projectType" name="project_type">
+                    <option value="Not Specified">Project Type</option>
+                    <option value="Residential">Residential</option>
+                    <option value="Commercial">Commercial</option>
+                    <option value="Institutional">Institutional</option>
+                    <option value="Importer / Distributor">Importer / Distributor</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <textarea id="requirement" name="requirement" placeholder="Describe your requirement"
+                    required></textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="submit-btn" id="submitBtn">SUBMIT INQUIRY</button>
+            </div>
+
+        </form>
+
+    </section>
+
+    <div class="footer">
+        © 2026 ANAY Premium Stone | Stone Solutions for Timeless Spaces
+    </div>
+
+</body>
+
+</html>
