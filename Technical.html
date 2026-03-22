@@ -3,259 +3,381 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Technical Capability | ANAY Premium Stone</title>
+
+<title>Sandstone Technical Specifications & Performance | ANAY Premium Stone</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-* { box-sizing: border-box; }
-body { overflow-x: hidden; max-width: 100vw; }
+
+*{box-sizing:border-box;}
+
 body{
-    margin:0;
-    font-family:'Montserrat',sans-serif;
-    background:#f6f3ed;
-    color:#2c2c2c;
-    line-height:1.8;
+margin:0;
+font-family:'Montserrat',sans-serif;
+background:#f6f3ed;
+color:#2c2c2c;
+line-height:1.8;
+overflow-x:hidden;
 }
+
+/* HEADER */
 
 header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:30px 8%;
-    background:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:white;
+    position: relative;
+    z-index: 1000;
+height:100px;
+padding-right:8%;
+padding-left:0;
 }
 
-.logo{
-    font-family:'Playfair Display',serif;
-    font-size:22px;
-    letter-spacing:3px;
-}
+
 
 nav a{
-    text-decoration:none;
-    margin-left:35px;
-    font-size:13px;
-    color:#2c2c2c;
+text-decoration:none;
+margin-left:35px;
+font-size:13px;
+color:#2c2c2c;
 }
 
+/* HERO */
+
 .hero{
-    padding:160px 8%;
-    text-align:center;
-    background:white;
+padding:180px 8%;
+text-align:center;
+color:white;
+background:
+linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
+url("images/sandstone-slabs.jpg");
+background-size:cover;
+background-position:center;
 }
 
 .hero h1{
-    font-family:'Playfair Display',serif;
-    font-size:52px;
+font-family:'Playfair Display',serif;
+font-size:52px;
 }
 
 .hero p{
-    max-width:850px;
-    margin:25px auto 0;
-    font-weight:300;
+max-width:850px;
+margin:25px auto 0;
+font-weight:300;
 }
 
-.section{
-    padding:120px 8%;
+/* SPLIT SECTION */
+
+.split{
+display:flex;
+align-items:center;
+gap:80px;
+padding:120px 8%;
 }
 
-.section h2{
-    font-family:'Playfair Display',serif;
-    font-size:38px;
-    margin-bottom:30px;
+.split img{
+width:50%;
+height:450px;
+object-fit:cover;
 }
 
-.section p{
-    max-width:900px;
-    font-weight:300;
+.split-text{
+width:50%;
 }
 
-.box{
-    background:white;
-    padding:70px;
-    margin-top:40px;
+.split-text h2{
+font-family:'Playfair Display',serif;
+font-size:38px;
+margin-bottom:25px;
 }
 
 .list{
-    margin-top:30px;
+margin-top:20px;
 }
 
 .list p{
-    margin:8px 0;
+margin:8px 0;
+font-weight:300;
+}
+
+.split.reverse{
+flex-direction:row-reverse;
 }
 
 /* CTA */
+
 .cta{
-    background:#2b2b2b;
-    text-align:center;
-    padding:140px 8%;
+background:#2b2b2b;
+text-align:center;
+padding:140px 8%;
 }
 
 .cta-btn{
-    display:inline-block;
-    padding:18px 50px;
-    background:#ffffff;
-    color:#2b2b2b;
-    text-decoration:none;
-    font-size:13px;
-    letter-spacing:2px;
-    border:1px solid #ffffff;
-    transition:all 0.3s ease;
+display:inline-block;
+padding:18px 50px;
+background:#ffffff;
+color:#2b2b2b;
+text-decoration:none;
+font-size:13px;
+letter-spacing:2px;
+border:1px solid #ffffff;
+transition:all 0.3s ease;
 }
 
 .cta-btn:hover{
-    background:transparent;
-    color:#ffffff;
+background:transparent;
+color:#ffffff;
 }
+
+/* FOOTER */
 
 .footer{
-    background:#1c1c1c;
-    color:#aaa;
-    text-align:center;
-    padding:50px;
-    font-size:13px;
+background:#1c1c1c;
+color:#aaa;
+text-align:center;
+padding:50px;
+font-size:13px;
 }
 
-/* Dropdown CSS */
-.dropdown {
-    position: relative;
-    display: inline-block;
+/* DROPDOWN */
+
+.dropdown{
+position:relative;
+display:inline-block;
 }
-.dropdown .dropbtn {
-    text-decoration: none;
-    margin-left: 30px;
-    font-size: 13px;
-    color: inherit;
-    cursor: pointer;
-    background: none;
-    border: none;
-    padding: 0;
-    font-family: inherit;
-    outline: none;
+
+.dropdown .dropbtn{
+text-decoration:none;
+margin-left:35px;
+font-size:13px;
+color:inherit;
+cursor:pointer;
+background:none;
+border:none;
+padding:0;
+font-family:inherit;
 }
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #ffffff;
-    min-width: 200px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 999;
-    top: 100%;
-    left: 30px;
-    border-radius: 4px;
+
+.dropdown-content{
+display:none;
+position:absolute;
+background:#ffffff;
+min-width:200px;
+box-shadow:0px 8px 16px rgba(0,0,0,0.2);
+z-index:999;
+top:100%;
+left:35px;
+border-radius:4px;
 }
-.dropdown-content a {
-    color: #111 !important;
-    padding: 12px 16px !important;
-    text-decoration: none;
-    display: block !important;
-    margin: 0 !important;
-    text-align: left;
-    font-size: 13px;
-    opacity: 1 !important;
-    border-bottom: 1px solid #eee;
+
+.dropdown-content a{
+color:#111!important;
+padding:12px 16px!important;
+text-decoration:none;
+display:block!important;
+margin:0!important;
+font-size:13px;
+border-bottom:1px solid #eee;
 }
-.dropdown-content a:last-child {
-    border-bottom: none;
+
+.dropdown-content a:last-child{
+border-bottom:none;
 }
-.dropdown-content a:hover {
-    background-color: #f5f5f5 !important;
-    color: #000 !important;
+
+.dropdown-content a:hover{
+background:#f5f5f5!important;
 }
-.dropdown:hover .dropdown-content {
-    display: block;
+
+.dropdown:hover .dropdown-content{
+display:block;
 }
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.split{
+flex-direction:column;
+}
+
+.split.reverse{
+flex-direction:column;
+}
+
+.split img{
+width:100%;
+}
+
+.split-text{
+width:100%;
+}
+
+.hero h1{
+font-size:38px;
+}
+
+}
+
+
+/* About1 logo & header overrides */
+.logo img{
+height:250px;
+width:auto;
+}
+header { padding-right:8% !important; padding-left:0 !important; height:100px !important; }
 </style>
-
 </head>
 
 <body>
 
 <header>
-    <div class="logo"><a href="index.html" style="color:inherit; text-decoration:none;">ANAY PREMIUM STONE</a></div>
-    <nav style="display: flex; align-items: center;">
-        <a href="index.html">Home</a>
-        <a href="About.html">About</a>
-        <div class="dropdown">
-            <a href="Products.html" class="dropbtn">Products ▼</a>
-            <div class="dropdown-content">
-                <a href="Bansi Paharpur Pink.html">Bansi Paharpur Pink</a>
-                <a href="Dholpur Beige.html">Dholpur Beige</a>
-                <a href="Dholpur red.html">Dholpur Red</a>
-            </div>
-        </div>
-        <a href="Application.html">Applications</a>
-        <a href="infrastructure.html">Infrastructure</a>
-        <a href="Technical.html">Technical</a>
-        <a href="Contact.html">Contact</a>
-    </nav>
+
+<div class="logo">
+    <a href="index.html">
+        <img src="images/anay-premium-stone-logo.jpg.png" alt="ANAY Premium Stone Logo" >
+    </a>
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="About.html">About</a>
+<div class="dropdown">
+    <a href="Products.html" class="dropbtn">Products ▼</a>
+    <div class="dropdown-content">
+        <a href="Bansi Paharpur Pink.html">Bansi Paharpur Pink</a>
+        <a href="Dholpur Beige.html">Dholpur Beige</a>
+        <a href="Dholpur red.html">Dholpur Red</a>
+    </div>
+</div>
+<a href="Application.html">Applications</a>
+<a href="infrastructure.html">Infrastructure</a>
+<a href="Technical.html">Technical</a>
+<a href="Contact.html">Contact</a>
+</nav>
+
 </header>
 
+<!-- HERO -->
+
 <section class="hero">
-    <h1>Technical Capability & Performance Overview</h1>
-    <p>
-        Performance characteristics and dimensional standards relevant for architectural
-        specification and international supply.
-    </p>
+
+<h1>Sandstone Technical Specifications & Performance</h1>
+
+<p>
+Performance characteristics and dimensional standards relevant for
+architectural specification and international supply.
+</p>
+
 </section>
 
-<section class="section">
-    <h2>Material Performance Characteristics</h2>
-    <div class="box">
-        <div class="list">
-            <p>• Suitable compressive strength for façade and structural wall applications</p>
-            <p>• Moderate water absorption typical of architectural-grade sandstone</p>
-            <p>• Good flexural performance for cladding systems</p>
-            <p>• Density range appropriate for exterior and landscape installations</p>
-            <p>• Weather-resistant performance under standard environmental exposure</p>
-        </div>
-    </div>
+<!-- MATERIAL PERFORMANCE -->
+
+<section class="split">
+
+<img src="images/material-performance.jpg.png"
+alt="Architectural sandstone slab surface texture">
+
+<div class="split-text">
+
+<h2>Material Performance Characteristics</h2>
+
+<div class="list">
+
+<p>• Suitable compressive strength for façade and structural wall applications</p>
+<p>• Moderate water absorption typical of architectural-grade sandstone</p>
+<p>• Good flexural performance for cladding systems</p>
+<p>• Density range appropriate for exterior and landscape installations</p>
+<p>• Weather-resistant performance under standard environmental exposure</p>
+
+</div>
+
+</div>
+
 </section>
 
-<section class="section">
-    <h2>Dimensional & Processing Capability</h2>
-    <div class="box">
-        <div class="list">
-            <p>• Precision cutting using gang saw and calibrated machinery</p>
-            <p>• Slabs, tiles, and cut-to-size panel production</p>
-            <p>• Custom thickness and dimensional tolerance management</p>
-            <p>• Surface finishing: Natural, Honed, Sandblasted, Machine Cut</p>
-            <p>• Block supply for carving and architectural detailing</p>
-        </div>
-    </div>
+<!-- DIMENSIONAL PROCESSING -->
+
+<section class="split reverse">
+
+<img src="images/dimensional.jpg.png"
+alt="Sandstone gang saw cutting slabs in manufacturing unit">
+
+<div class="split-text">
+
+<h2>Dimensional & Processing Capability</h2>
+
+<div class="list">
+
+<p>• Precision cutting using gang saw and calibrated machinery</p>
+<p>• Slabs, tiles, and cut-to-size panel production</p>
+<p>• Custom thickness and dimensional tolerance management</p>
+<p>• Surface finishing: Natural, Honed, Sandblasted, Machine Cut</p>
+<p>• Block supply for carving and architectural detailing</p>
+
+</div>
+
+</div>
+
 </section>
 
-<section class="section">
-    <h2>Testing & Certification</h2>
-    <div class="box">
-        <p>
-            Laboratory testing can be conducted in accordance with applicable Indian
-            and international standards. Detailed test certificates and performance
-            reports are available upon request for project-specific supply.
-        </p>
-    </div>
+<!-- TESTING -->
+
+<section class="split">
+
+<img src="images/Testing-Certification.jpg.png"
+alt="Sandstone thickness inspection and dimensional verification">
+
+<div class="split-text">
+
+<h2>Testing & Certification</h2>
+
+<p>
+Laboratory testing can be conducted in accordance with applicable Indian
+and international standards. Detailed test certificates and performance
+reports are available upon request for project-specific supply.
+</p>
+
+</div>
+
 </section>
 
-<section class="section">
-    <h2>Natural Material Variation</h2>
-    <div class="box">
-        <p>
-            As a natural stone, sandstone may exhibit inherent variation in color,
-            grain structure, and physical characteristics. Technical values may vary
-            within acceptable industry tolerances depending on quarry bench and batch.
-        </p>
-    </div>
+<!-- NATURAL VARIATION -->
+
+<section class="split reverse">
+
+<img src="images/stone-variety.jpg.png"
+alt="Natural variation in sandstone slabs and color tones">
+
+<div class="split-text">
+
+<h2>Natural Material Variation</h2>
+
+<p>
+As a natural stone, sandstone may exhibit inherent variation in color,
+grain structure, and physical characteristics. Technical values may vary
+within acceptable industry tolerances depending on quarry bench and batch.
+</p>
+
+</div>
+
 </section>
+
+<!-- CTA -->
 
 <section class="cta">
-    <a href="contact.html" class="cta-btn">
-        Request Detailed Laboratory Report
-    </a>
+
+<a href="contact.html" class="cta-btn">
+Request Detailed Laboratory Report
+</a>
+
 </section>
 
 <div class="footer">
-    © 2026 ANAY Premium Stone | Sarmathura, Dholpur, Rajasthan, India
+
+© 2026 ANAY Premium Stone | Sarmathura, Dholpur, Rajasthan, India
+
 </div>
 
 </body>

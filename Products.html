@@ -1,239 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dholpur Beige Sandstone | ANAY Premium Stone</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dholpur Beige Sandstone | ANAY Premium Stone</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Montserrat:wght@300;400&display=swap"
+        rel="stylesheet">
 
-<style>
-* { box-sizing: border-box; }
-body { overflow-x: hidden; max-width: 100vw; }
-body{
-    margin:0;
-    font-family:'Montserrat',sans-serif;
-    background:#f5f2ea;
-    color:#2c2c2c;
-    line-height:1.8;
-}
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:30px 8%;
-    background:white;
-}
+        body {
+            overflow-x: hidden;
+            max-width: 100vw;
+        }
 
-.logo{
-    font-family:'Playfair Display',serif;
-    font-size:22px;
-    letter-spacing:3px;
-}
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background: #f5f2ea;
+            color: #2c2c2c;
+            line-height: 1.8;
+        }
 
-nav a{
-    text-decoration:none;
-    margin-left:35px;
-    font-size:13px;
-    color:#2c2c2c;
-}
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 8%;
+            background: white;
+            position: relative;
+            z-index: 1000;
+        }
 
-.hero{
-    height:85vh;
-    background:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    color:white;
-}
+        
 
-.hero h1{
-    font-family:'Playfair Display',serif;
-    font-size:52px;
-}
+        nav a {
+            text-decoration: none;
+            margin-left: 35px;
+            font-size: 13px;
+            color: #2c2c2c;
+        }
 
-.section{
-    padding:120px 10%;
-}
+        .hero {
+            height: 85vh;
+            background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
 
-.section h2{
-    font-family:'Playfair Display',serif;
-    font-size:36px;
-    margin-bottom:25px;
-}
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 52px;
+        }
 
-.section p{
-    max-width:850px;
-    font-weight:300;
-}
+        .section {
+            padding: 120px 10%;
+        }
 
-.grid{
-    display:flex;
-    gap:40px;
-    margin-top:60px;
-}
+        .section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            margin-bottom: 25px;
+        }
 
-.grid div{
-    flex:1;
-}
+        .section p {
+            max-width: 850px;
+            font-weight: 300;
+        }
 
-.cta{
-    background:#2b2b2b;
-    color:white;
-    padding:120px 10%;
-    text-align:center;
-}
+        .grid {
+            display: flex;
+            gap: 40px;
+            margin-top: 60px;
+        }
 
-.cta h2{
-    font-family:'Playfair Display',serif;
-    font-size:36px;
-}
+        .grid div {
+            flex: 1;
+        }
 
-.footer{
-    background:#1c1c1c;
-    color:#aaa;
-    text-align:center;
-    padding:50px;
-    font-size:13px;
-}
+        .cta {
+            background: #2b2b2b;
+            color: white;
+            padding: 120px 10%;
+            text-align: center;
+        }
 
-/* Dropdown CSS */
-.dropdown {
-    position: relative;
-    display: inline-block;
+        .cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+        }
+
+        .footer {
+            background: #1c1c1c;
+            color: #aaa;
+            text-align: center;
+            padding: 50px;
+            font-size: 13px;
+        }
+
+        /* Dropdown CSS */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown .dropbtn {
+            text-decoration: none;
+            margin-left: 35px;
+            font-size: 13px;
+            color: inherit;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0;
+            font-family: inherit;
+            outline: none;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #ffffff;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+            top: 100%;
+            left: 35px;
+            border-radius: 4px;
+        }
+
+        .dropdown-content a {
+            color: #111 !important;
+            padding: 12px 16px !important;
+            text-decoration: none;
+            display: block !important;
+            margin: 0 !important;
+            text-align: left;
+            font-size: 13px;
+            opacity: 1 !important;
+            border-bottom: 1px solid #eee;
+        }
+
+        .dropdown-content a:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f5f5f5 !important;
+            color: #000 !important;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    
+/* About1 logo & header overrides */
+.logo img{
+height:250px;
+width:auto;
 }
-.dropdown .dropbtn {
-    text-decoration: none;
-    margin-left: 30px;
-    font-size: 13px;
-    color: inherit;
-    cursor: pointer;
-    background: none;
-    border: none;
-    padding: 0;
-    font-family: inherit;
-    outline: none;
-}
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #ffffff;
-    min-width: 200px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 999;
-    top: 100%;
-    left: 30px;
-    border-radius: 4px;
-}
-.dropdown-content a {
-    color: #111 !important;
-    padding: 12px 16px !important;
-    text-decoration: none;
-    display: block !important;
-    margin: 0 !important;
-    text-align: left;
-    font-size: 13px;
-    opacity: 1 !important;
-    border-bottom: 1px solid #eee;
-}
-.dropdown-content a:last-child {
-    border-bottom: none;
-}
-.dropdown-content a:hover {
-    background-color: #f5f5f5 !important;
-    color: #000 !important;
-}
-.dropdown:hover .dropdown-content {
-    display: block;
-}
+header { padding-right:8% !important; padding-left:0 !important; height:100px !important; }
 </style>
 
 </head>
 
 <body>
 
-<header>
-    <div class="logo"><a href="index.html" style="color:inherit; text-decoration:none;">ANAY PREMIUM STONE</a></div>
-    <nav style="display: flex; align-items: center;">
-        <a href="index.html">Home</a>
-        <a href="About.html">About</a>
-        <div class="dropdown">
-            <a href="Products.html" class="dropbtn">Products ▼</a>
-            <div class="dropdown-content">
-                <a href="Bansi Paharpur Pink.html">Bansi Paharpur Pink</a>
-                <a href="Dholpur Beige.html">Dholpur Beige</a>
-                <a href="Dholpur red.html">Dholpur Red</a>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/anay-premium-stone-logo.jpg.png" alt="ANAY Premium Stone Logo"
+                    >
+            </a>
+        </div>
+        <nav>
+<a href="index.html">Home</a>
+<a href="About.html">About</a>
+<div class="dropdown">
+    <a href="Products.html" class="dropbtn">Products ▼</a>
+    <div class="dropdown-content">
+        <a href="Bansi Paharpur Pink.html">Bansi Paharpur Pink</a>
+        <a href="Dholpur Beige.html">Dholpur Beige</a>
+        <a href="Dholpur red.html">Dholpur Red</a>
+    </div>
+</div>
+<a href="Application.html">Applications</a>
+<a href="infrastructure.html">Infrastructure</a>
+<a href="Technical.html">Technical</a>
+<a href="Contact.html">Contact</a>
+</nav>
+    </header>
+
+    <section class="hero">
+        <h1>Dholpur Beige Sandstone</h1>
+    </section>
+
+    <section class="section">
+        <h2>Material Overview</h2>
+        <p>
+            Dholpur Beige is a warm-toned architectural sandstone sourced from the sandstone
+            belts of Dholpur, Rajasthan. Known for its uniform texture and structural stability,
+            it is widely specified for contemporary façades, cladding systems, exterior paving,
+            and landscape developments.
+        </p>
+    </section>
+
+    <section class="section" style="background:white;">
+        <h2>Applications</h2>
+        <div class="grid">
+            <div>
+                <p>• Exterior wall cladding</p>
+                <p>• Façade panels</p>
+                <p>• Landscape paving</p>
+            </div>
+            <div>
+                <p>• Boundary walls</p>
+                <p>• Staircases & steps</p>
+                <p>• Institutional projects</p>
             </div>
         </div>
-        <a href="Application.html">Applications</a>
-        <a href="infrastructure.html">Infrastructure</a>
-        <a href="Technical.html">Technical</a>
-        <a href="Contact.html">Contact</a>
-    </nav>
-</header>
+    </section>
 
-<section class="hero">
-    <h1>Dholpur Beige Sandstone</h1>
-</section>
-
-<section class="section">
-    <h2>Material Overview</h2>
-    <p>
-        Dholpur Beige is a warm-toned architectural sandstone sourced from the sandstone 
-        belts of Dholpur, Rajasthan. Known for its uniform texture and structural stability, 
-        it is widely specified for contemporary façades, cladding systems, exterior paving, 
-        and landscape developments.
-    </p>
-</section>
-
-<section class="section" style="background:white;">
-    <h2>Applications</h2>
-    <div class="grid">
-        <div>
-            <p>• Exterior wall cladding</p>
-            <p>• Façade panels</p>
-            <p>• Landscape paving</p>
+    <section class="section">
+        <h2>Available Finishes</h2>
+        <div class="grid">
+            <div>
+                <p>• Natural</p>
+                <p>• Honed</p>
+            </div>
+            <div>
+                <p>• Sandblasted</p>
+                <p>• Machine Cut</p>
+            </div>
         </div>
-        <div>
-            <p>• Boundary walls</p>
-            <p>• Staircases & steps</p>
-            <p>• Institutional projects</p>
-        </div>
+    </section>
+
+    <section class="section" style="background:white;">
+        <h2>Available Formats</h2>
+        <p>
+            Slabs, tiles, cut-to-size panels, and custom architectural elements
+            manufactured with dimensional tolerance control for export markets.
+        </p>
+    </section>
+
+    <section class="cta">
+        <h2>Request Technical Data or Project Quotation</h2>
+        <p>Serious architectural and import inquiries only.</p>
+    </section>
+
+    <div class="footer">
+        © 2026 ANAY Premium Stone | Premium Sandstone Exporter
     </div>
-</section>
-
-<section class="section">
-    <h2>Available Finishes</h2>
-    <div class="grid">
-        <div>
-            <p>• Natural</p>
-            <p>• Honed</p>
-        </div>
-        <div>
-            <p>• Sandblasted</p>
-            <p>• Machine Cut</p>
-        </div>
-    </div>
-</section>
-
-<section class="section" style="background:white;">
-    <h2>Available Formats</h2>
-    <p>
-        Slabs, tiles, cut-to-size panels, and custom architectural elements 
-        manufactured with dimensional tolerance control for export markets.
-    </p>
-</section>
-
-<section class="cta">
-    <h2>Request Technical Data or Project Quotation</h2>
-    <p>Serious architectural and import inquiries only.</p>
-</section>
-
-<div class="footer">
-    © 2026 ANAY Premium Stone | Premium Sandstone Exporter
-</div>
 
 </body>
+
 </html>

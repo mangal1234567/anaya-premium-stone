@@ -1,275 +1,366 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Us | ANAY Premium Stone</title>
+
+<title>Rajasthan Sandstone Manufacturer & Exporter | ANAY Premium Stone</title>
+
+<meta name="description" content="ANAY Premium Stone is a Rajasthan-based sandstone manufacturer and exporter specializing in Dholpur Beige, Dholpur Red, and Bansi Paharpur Pink sandstone for global architectural and landscaping projects.">
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-* { box-sizing: border-box; }
-body { overflow-x: hidden; max-width: 100vw; }
+
+*{box-sizing:border-box;}
+
 body{
-    margin:0;
-    font-family:'Montserrat',sans-serif;
-    background:#f5f3ee;
-    color:#2b2b2b;
-    line-height:1.8;
+margin:0;
+font-family:'Montserrat',sans-serif;
+background:#f5f3ee;
+color:#2b2b2b;
+line-height:1.8;
+overflow-x:hidden;
 }
+
+/* HEADER */
 
 header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:30px 8%;
-    background:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:white;
+    position: relative;
+    z-index: 1000;
+height:100px;
+padding-right:8%;
+padding-left:0;
 }
 
-.logo{
-    font-family:'Playfair Display',serif;
-    font-size:22px;
-    letter-spacing:3px;
-}
+
 
 nav a{
-    text-decoration:none;
-    margin-left:35px;
-    color:#2b2b2b;
-    font-size:13px;
-    letter-spacing:1px;
+text-decoration:none;
+margin-left:35px;
+color:#2b2b2b;
+font-size:13px;
+letter-spacing:1px;
 }
 
+/* HERO SECTION */
+
 .hero{
-    height:70vh;
-    background:url('https://images.unsplash.com/photo-1625505826222-7d8c6b3c7b6c?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    color:Black;
-    padding:0 20px;
+height:75vh;
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+padding:0 20px;
+position:relative;
+}
+
+.hero::before{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.45);
 }
 
 .hero h1{
-    font-family:'Playfair Display',serif;
-    font-size:46px;
-    max-width:800px;
+font-family:'Playfair Display',serif;
+font-size:46px;
+max-width:850px;
+z-index:2;
+position:relative;
 }
 
+/* SECTION */
+
 .section{
-    padding:120px 10%;
+padding:120px 10%;
 }
 
 .section h2{
-    font-family:'Playfair Display',serif;
-    font-size:34px;
-    margin-bottom:30px;
+font-family:'Playfair Display',serif;
+font-size:34px;
+margin-bottom:30px;
 }
 
+/* SPLIT SECTION */
+
 .split{
-    display:flex;
-    gap:70px;
-    align-items:center;
+display:flex;
+gap:70px;
+align-items:center;
 }
 
 .split img{
-    width:50%;
-    height:450px;
-    object-fit:cover;
+width:50%;
+height:450px;
+object-fit:cover;
 }
 
 .split .text{
-    width:50%;
-    font-weight:300;
+width:50%;
+font-weight:300;
 }
 
+/* VALUES */
+
 .values{
-    display:flex;
-    gap:50px;
-    margin-top:80px;
+display:flex;
+gap:50px;
+margin-top:80px;
 }
 
 .value-box{
-    flex:1;
+flex:1;
 }
 
 .value-box h3{
-    font-family:'Playfair Display',serif;
-    font-size:22px;
-    margin-bottom:15px;
+font-family:'Playfair Display',serif;
+font-size:22px;
+margin-bottom:15px;
 }
 
+/* DARK SECTION */
+
 .dark-section{
-    background:#2b2b2b;
-    color:white;
-    padding:120px 10%;
-    text-align:center;
+background:#2b2b2b;
+color:white;
+padding:120px 10%;
+text-align:center;
 }
 
 .dark-section h2{
-    font-family:'Playfair Display',serif;
-    font-size:34px;
-    margin-bottom:20px;
+font-family:'Playfair Display',serif;
+font-size:34px;
+margin-bottom:20px;
 }
+
+/* FOOTER */
 
 .footer{
-    background:#1c1c1c;
-    color:#b5b5b5;
-    text-align:center;
-    padding:50px;
-    font-size:13px;
+background:#1c1c1c;
+color:#b5b5b5;
+text-align:center;
+padding:50px;
+font-size:13px;
 }
 
-/* Dropdown CSS */
-.dropdown {
-    position: relative;
-    display: inline-block;
+/* DROPDOWN MENU */
+
+.dropdown{
+position:relative;
+display:inline-block;
 }
-.dropdown .dropbtn {
-    text-decoration: none;
-    margin-left: 30px;
-    font-size: 13px;
-    color: inherit;
-    cursor: pointer;
-    background: none;
-    border: none;
-    padding: 0;
-    font-family: inherit;
-    outline: none;
+
+.dropdown .dropbtn{
+text-decoration:none;
+margin-left:35px;
+font-size:13px;
+color:inherit;
+cursor:pointer;
 }
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #ffffff;
-    min-width: 200px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 999;
-    top: 100%;
-    left: 30px;
-    border-radius: 4px;
+
+.dropdown-content{
+display:none;
+position:absolute;
+background:#ffffff;
+min-width:200px;
+box-shadow:0 8px 16px rgba(0,0,0,0.2);
+z-index:999;
+top:100%;
+left:35px;
+border-radius:4px;
 }
-.dropdown-content a {
-    color: #111 !important;
-    padding: 12px 16px !important;
-    text-decoration: none;
-    display: block !important;
-    margin: 0 !important;
-    text-align: left;
-    font-size: 13px;
-    opacity: 1 !important;
-    border-bottom: 1px solid #eee;
+
+.dropdown-content a{
+color:#111;
+padding:12px 16px;
+text-decoration:none;
+display:block;
+font-size:13px;
+border-bottom:1px solid #eee;
 }
-.dropdown-content a:last-child {
-    border-bottom: none;
+
+.dropdown-content a:hover{
+background:#f5f5f5;
 }
-.dropdown-content a:hover {
-    background-color: #f5f5f5 !important;
-    color: #000 !important;
+
+.dropdown:hover .dropdown-content{
+display:block;
 }
-.dropdown:hover .dropdown-content {
-    display: block;
+
+
+/* About1 logo & header overrides */
+.logo img{
+height:250px;
+width:auto;
 }
+header { padding-right:8% !important; padding-left:0 !important; height:100px !important; }
 </style>
-
 </head>
 
 <body>
 
 <header>
-    <div class="logo"><a href="index.html" style="color:inherit; text-decoration:none;">ANAY PREMIUM STONE</a></div>
-    <nav style="display: flex; align-items: center;">
-        <a href="index.html">Home</a>
-        <a href="About.html">About</a>
-        <div class="dropdown">
-            <a href="Products.html" class="dropbtn">Products ▼</a>
-            <div class="dropdown-content">
-                <a href="Bansi Paharpur Pink.html">Bansi Paharpur Pink</a>
-                <a href="Dholpur Beige.html">Dholpur Beige</a>
-                <a href="Dholpur red.html">Dholpur Red</a>
-            </div>
-        </div>
-        <a href="Application.html">Applications</a>
-        <a href="infrastructure.html">Infrastructure</a>
-        <a href="Technical.html">Technical</a>
-        <a href="Contact.html">Contact</a>
-    </nav>
+
+<div class="logo">
+    <a href="index.html">
+        <img src="images/anay-premium-stone-logo.jpg.png" alt="ANAY Premium Stone Logo" >
+    </a>
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="About.html">About</a>
+<div class="dropdown">
+    <a href="Products.html" class="dropbtn">Products ▼</a>
+    <div class="dropdown-content">
+        <a href="Bansi Paharpur Pink.html">Bansi Paharpur Pink</a>
+        <a href="Dholpur Beige.html">Dholpur Beige</a>
+        <a href="Dholpur red.html">Dholpur Red</a>
+    </div>
+</div>
+<a href="Application.html">Applications</a>
+<a href="infrastructure.html">Infrastructure</a>
+<a href="Technical.html">Technical</a>
+<a href="Contact.html">Contact</a>
+</nav>
+
 </header>
 
-<section class="hero">
-    <h1>From Sarmathura’s Quarries to Global Architectural Projects</h1>
+<!-- HERO -->
+
+<section class="hero" style="background-image:url('images/hero-sandstone.jpg');">
+
+<h1>Premium Rajasthan Sandstone for Global Architectural Projects</h1>
+
 </section>
 
+<!-- ABOUT SECTION -->
+
 <section class="section">
-    <div class="split">
-        <img src="https://images.unsplash.com/photo-1597005230381-3b52f4f1516f?auto=format&fit=crop&w=1200&q=80">
-        <div class="text">
-            <h2>Rooted in Source. Built for Export.</h2>
-            <p>
-                ANAY Premium Stone is based in Sarmathura, Dholpur, a famous sandstone region in India.
-                With direct access to an extensive quarry network, we carefully select 
-                high-quality stone blocks to ensure consistent texture, superior strength,
-                and reliable long-term supply. This allows us to maintain strict quality control
-                from quarry to final product.
-            </p>
-            <p>
-                Every block is processed in our in-house facility using calibrated 
-                gang saws and precision cutting systems, allowing dimensional accuracy 
-                for slabs, tiles, and project-specific architectural requirements.
-            </p>
-        </div>
-    </div>
+
+<div class="split">
+
+<img src="images/Dholpur-Sandstone.jpg.png" alt="Rajasthan sandstone quarry and manufacturing facility">
+
+<div class="text">
+
+<h2>Rooted in Source. Built for Export.</h2>
+
+<p>
+ANAY Premium Stone is a Rajasthan-based sandstone manufacturer and exporter located in Sarmathura, Dholpur — one of India’s most recognized sandstone belts. We specialize in high-quality Dholpur Beige, Dholpur Red, and Bansi Paharpur Pink sandstone for global architectural and landscaping projects.
+</p>
+
+<p>
+With direct access to controlled quarry sources, we ensure long-term raw material stability, color consistency, and dependable bulk supply. From block selection to final finishing, every stage is managed within our integrated in-house processing facility.
+</p>
+
+<p>
+Our sandstone slabs, tiles, and custom architectural components are supplied to architects, contractors, and stone importers across the USA, UK, Europe, UAE, and Australia.
+</p>
+
+</div>
+
+</div>
+
 </section>
+
+<!-- MANUFACTURING -->
 
 <section class="section" style="background:white;">
-    <div class="split">
-        <div class="text">
-            <h2>Structured Manufacturing & Export Discipline</h2>
-            <p>
-                Our production workflow is designed specifically for international 
-                buyers — focusing on consistent sizing, finish uniformity, and 
-                project-based customization. From surface finishing to packaging, 
-                each stage follows controlled inspection protocols.
-            </p>
-            <p>
-                We prepare material for containerized exports with moisture protection, 
-                pallet optimization, and documentation compliance suitable for 
-                USA, UK, Europe, UAE, and Australian markets.
-            </p>
-        </div>
-        <img src="https://images.unsplash.com/photo-1581091012184-5c63d6f4c94b?auto=format&fit=crop&w=1200&q=80">
-    </div>
+
+<div class="split">
+
+<div class="text">
+
+<h2>Structured Manufacturing & Export Discipline</h2>
+
+<p>
+Our manufacturing infrastructure includes calibrated gang saw machines, precision cutting lines, and finishing systems designed for consistent production output.
+</p>
+
+<p>
+Production workflows follow strict export standards including dimensional tolerance checks, shade consistency evaluation, and secure palletized container packaging for international shipments.
+</p>
+
+</div>
+
+<img src="images/Rajasthan-Sandstone-Manufacturer.jpg.png" alt="Sandstone manufacturing in Rajasthan">
+
+</div>
+
 </section>
+
+<!-- VALUES -->
 
 <section class="section">
-    <h2>Our Operational Philosophy</h2>
-    <div class="values">
-        <div class="value-box">
-            <h3>Quarry Control</h3>
-            <p>Direct sourcing from controlled sandstone belts of Dholpur ensures material consistency across bulk volumes.</p>
-        </div>
-        <div class="value-box">
-            <h3>Precision Processing</h3>
-            <p>Dimensional tolerance management for slabs, tiles, cladding panels, and custom-cut architectural elements.</p>
-        </div>
-        <div class="value-box">
-            <h3>Global Supply Approach</h3>
-            <p>Structured export workflow designed for architects, contractors, and stone importers seeking reliability.</p>
-        </div>
-    </div>
+
+<h2>Our Structural Strength</h2>
+
+<div class="values">
+
+<div class="value-box">
+
+<h3>Quarry Control</h3>
+
+<p>Direct access to sandstone quarry sources ensures stable raw material availability and long-term supply consistency for bulk export orders.</p>
+
+</div>
+
+<div class="value-box">
+
+<h3>Precision Processing</h3>
+
+<p>Advanced cutting and finishing processes enable dimensional accuracy and finish uniformity across slabs, tiles, cladding panels, and architectural components.</p>
+
+</div>
+
+<div class="value-box">
+
+<h3>Global Supply Approach</h3>
+
+<p>A structured export workflow designed for architects, builders, developers, and stone importers seeking dependable Indian sandstone supply.</p>
+
+</div>
+
+</div>
+
 </section>
+
+<!-- TAGLINE -->
 
 <section class="dark-section">
-    <h2>Stone Solutions for Timeless Spaces</h2>
-    <p>
-        We collaborate with architects, developers, and distributors who prioritize 
-        material authenticity, structural reliability, and refined architectural expression.
-    </p>
+
+<h2>Stone Solutions for Timeless Spaces</h2>
+
+<p>
+As a premium Indian sandstone manufacturer and global exporter, we collaborate with architects, contractors, and distributors who prioritize material authenticity and long-term supply partnerships.
+</p>
+
 </section>
 
+<!-- FOOTER -->
+
 <div class="footer">
-    © 2026 ANAY Premium Stone | Sarmathura, Dholpur, Rajasthan, India  
-    <br>Premium Natural Sandstone Manufacturer & Exporter
+
+© 2026 ANAY Premium Stone | Sarmathura, Dholpur, Rajasthan, India
+
+<br>
+
+Premium Natural Sandstone Manufacturer & Exporter
+
 </div>
 
 </body>

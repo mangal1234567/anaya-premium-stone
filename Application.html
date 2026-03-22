@@ -1,169 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Material Applications | ANAY Premium Stone</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-* { box-sizing: border-box; }
-body { overflow-x: hidden; max-width: 100vw; }
+
+*{box-sizing:border-box}
+
 body{
-    margin:0;
-    font-family:'Montserrat',sans-serif;
-    background:#f5f2ec;
-    color:#2c2c2c;
-    line-height:1.8;
+margin:0;
+font-family:'Montserrat',sans-serif;
+background:#f5f2ec;
+color:#2c2c2c;
+line-height:1.8;
+overflow-x:hidden;
 }
 
 header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:30px 8%;
-    background:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:white;
+    position: relative;
+    z-index: 1000;
+height:100px;
+padding-right:8%;
+padding-left:0;
 }
 
-.logo{
-    font-family:'Playfair Display',serif;
-    font-size:22px;
-    letter-spacing:3px;
-}
+
 
 nav a{
-    text-decoration:none;
-    margin-left:35px;
-    font-size:13px;
-    color:#2c2c2c;
+text-decoration:none;
+margin-left:35px;
+font-size:13px;
+color:#2c2c2c;
 }
 
-/* Hero */
+/* HERO SECTION */
+
 .hero{
-    padding:160px 8%;
-    text-align:center;
-    background:white;
+
+padding:200px 8%;
+text-align:center;
+color:white;
+
+background:
+linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)),
+url("images/sandstone-architecture-application.jpg");
+
+background-size:cover;
+background-position:center;
+
 }
 
 .hero h1{
-    font-family:'Playfair Display',serif;
-    font-size:52px;
+font-family:'Playfair Display',serif;
+font-size:52px;
+letter-spacing:1px;
 }
 
 .hero p{
-    max-width:800px;
-    margin:25px auto 0;
-    font-weight:300;
+max-width:800px;
+margin:25px auto 0;
+font-weight:300;
+color:#e6e6e6;
 }
 
-/* Application Section */
+/* APPLICATION SECTION */
+
 .application{
-    padding:120px 8%;
+
+display:flex;
+align-items:center;
+gap:90px;
+
+padding:130px 8%;
+
+}
+
+.application.reverse{
+flex-direction:row-reverse;
+background:white;
 }
 
 .application img{
-    width:100%;
-    height:550px;
-    object-fit:cover;
+
+width:50%;
+height:520px;
+object-fit:cover;
+
 }
 
 .application-content{
-    margin-top:40px;
+
+width:50%;
+
 }
 
 .application-content h2{
-    font-family:'Playfair Display',serif;
-    font-size:36px;
+
+font-family:'Playfair Display',serif;
+font-size:38px;
+margin-bottom:20px;
+
 }
 
 .application-content p{
-    max-width:900px;
-    font-weight:300;
+
+font-weight:300;
+max-width:520px;
+
 }
 
 /* CTA */
+
 .cta{
-    background:#2b2b2b;
-    text-align:center;
-    padding:140px 8%;
+
+background:#2b2b2b;
+text-align:center;
+padding:140px 8%;
+
 }
 
 .cta-btn{
-    display:inline-block;
-    padding:18px 50px;
-    background:#ffffff;
-    color:#2b2b2b;
-    text-decoration:none;
-    font-size:13px;
-    letter-spacing:2px;
-    border:1px solid #ffffff;
-    transition:all 0.3s ease;
+
+display:inline-block;
+padding:18px 50px;
+background:#ffffff;
+color:#2b2b2b;
+text-decoration:none;
+font-size:13px;
+letter-spacing:2px;
+border:1px solid #ffffff;
+transition:all 0.3s ease;
+
 }
 
 .cta-btn:hover{
-    background:transparent;
-    color:#ffffff;
+
+background:transparent;
+color:#ffffff;
+
 }
 
-/* Footer */
+/* FOOTER */
+
 .footer{
-    background:#1c1c1c;
-    color:#aaa;
-    text-align:center;
-    padding:50px;
-    font-size:13px;
+
+background:#1c1c1c;
+color:#aaa;
+text-align:center;
+padding:50px;
+font-size:13px;
+
 }
 
-/* Dropdown CSS */
-.dropdown {
-    position: relative;
-    display: inline-block;
+/* DROPDOWN */
+
+.dropdown{
+position:relative;
+display:inline-block;
 }
-.dropdown .dropbtn {
-    text-decoration: none;
-    margin-left: 30px;
-    font-size: 13px;
-    color: inherit;
-    cursor: pointer;
-    background: none;
-    border: none;
-    padding: 0;
-    font-family: inherit;
-    outline: none;
+
+.dropdown .dropbtn{
+text-decoration:none;
+margin-left:35px;
+font-size:13px;
+color:inherit;
+cursor:pointer;
+background:none;
+border:none;
+padding:0;
+font-family:inherit;
 }
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #ffffff;
-    min-width: 200px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 999;
-    top: 100%;
-    left: 30px;
-    border-radius: 4px;
+
+.dropdown-content{
+
+display:none;
+position:absolute;
+background:#ffffff;
+min-width:200px;
+box-shadow:0px 8px 16px rgba(0,0,0,0.2);
+z-index:999;
+top:100%;
+left:35px;
+border-radius:4px;
+
 }
-.dropdown-content a {
-    color: #111 !important;
-    padding: 12px 16px !important;
-    text-decoration: none;
-    display: block !important;
-    margin: 0 !important;
-    text-align: left;
-    font-size: 13px;
-    opacity: 1 !important;
-    border-bottom: 1px solid #eee;
+
+.dropdown-content a{
+
+color:#111!important;
+padding:12px 16px!important;
+text-decoration:none;
+display:block!important;
+margin:0!important;
+text-align:left;
+font-size:13px;
+border-bottom:1px solid #eee;
+
 }
-.dropdown-content a:last-child {
-    border-bottom: none;
+
+.dropdown-content a:last-child{
+border-bottom:none;
 }
-.dropdown-content a:hover {
-    background-color: #f5f5f5 !important;
-    color: #000 !important;
+
+.dropdown-content a:hover{
+background:#f5f5f5;
 }
-.dropdown:hover .dropdown-content {
-    display: block;
+
+.dropdown:hover .dropdown-content{
+display:block;
 }
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.application{
+
+flex-direction:column;
+gap:40px;
+
+}
+
+.application.reverse{
+
+flex-direction:column;
+
+}
+
+.application img{
+
+width:100%;
+height:400px;
+
+}
+
+.application-content{
+
+width:100%;
+
+}
+
+.hero h1{
+font-size:40px;
+}
+
+}
+
+
+/* About1 logo & header overrides */
+.logo img{
+height:250px;
+width:auto;
+}
+header { padding-right:8% !important; padding-left:0 !important; height:100px !important; }
 </style>
 
 </head>
@@ -171,91 +270,149 @@ nav a{
 <body>
 
 <header>
-    <div class="logo"><a href="index.html" style="color:inherit; text-decoration:none;">ANAY PREMIUM STONE</a></div>
-    <nav style="display: flex; align-items: center;">
-        <a href="index.html">Home</a>
-        <a href="About.html">About</a>
-        <div class="dropdown">
-            <a href="Products.html" class="dropbtn">Products ▼</a>
-            <div class="dropdown-content">
-                <a href="Bansi Paharpur Pink.html">Bansi Paharpur Pink</a>
-                <a href="Dholpur Beige.html">Dholpur Beige</a>
-                <a href="Dholpur red.html">Dholpur Red</a>
-            </div>
-        </div>
-        <a href="Application.html">Applications</a>
-        <a href="infrastructure.html">Infrastructure</a>
-        <a href="Technical.html">Technical</a>
-        <a href="Contact.html">Contact</a>
-    </nav>
+
+<div class="logo">
+    <a href="index.html">
+        <img src="images/anay-premium-stone-logo.jpg.png" alt="ANAY Premium Stone Logo" >
+    </a>
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="About.html">About</a>
+<div class="dropdown">
+    <a href="Products.html" class="dropbtn">Products ▼</a>
+    <div class="dropdown-content">
+        <a href="Bansi Paharpur Pink.html">Bansi Paharpur Pink</a>
+        <a href="Dholpur Beige.html">Dholpur Beige</a>
+        <a href="Dholpur red.html">Dholpur Red</a>
+    </div>
+</div>
+<a href="Application.html">Applications</a>
+<a href="infrastructure.html">Infrastructure</a>
+<a href="Technical.html">Technical</a>
+<a href="Contact.html">Contact</a>
+</nav>
+
 </header>
 
+<!-- HERO -->
+
 <section class="hero">
-    <h1>Material Applications</h1>
-    <p>
-        Representative architectural applications demonstrating the versatility,
-        structural reliability, and aesthetic character of our sandstone materials.
-    </p>
+
+<h1>Material Applications</h1>
+
+<p>
+Representative architectural applications demonstrating the versatility,
+structural reliability, and aesthetic character of our sandstone materials.
+</p>
+
 </section>
 
-<!-- Application 1 -->
+
+<!-- APPLICATION 1 -->
+
 <section class="application">
-    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80">
-    <div class="application-content">
-        <h2>Exterior Wall Cladding</h2>
-        <p>
-            Dholpur Beige and Dholpur Red are commonly specified for exterior wall systems,
-            offering dimensional precision and long-term weather resistance in residential
-            and institutional developments.
-        </p>
-    </div>
+
+<img src="images/wall-cladding.jpg.png">
+
+<div class="application-content">
+
+<h2>Exterior Wall Cladding</h2>
+
+<p>
+Dholpur Beige and Dholpur Red are widely specified for exterior wall systems,
+offering dimensional precision, structural reliability, and long-term
+weather resistance in residential and institutional developments.
+</p>
+
+</div>
+
 </section>
 
-<!-- Application 2 -->
-<section class="application" style="background:white;">
-    <img src="https://images.unsplash.com/photo-1599423300746-b62533397364?auto=format&fit=crop&w=1600&q=80">
-    <div class="application-content">
-        <h2>Landscape & Paving Systems</h2>
-        <p>
-            Suitable for pathways, courtyards, and urban landscaping,
-            sandstone paving solutions provide durability with natural slip resistance.
-        </p>
-    </div>
+
+<!-- APPLICATION 2 -->
+
+<section class="application reverse">
+
+<img src="images/landscapping-paving.jpg.png">
+
+<div class="application-content">
+
+<h2>Landscape & Paving Systems</h2>
+
+<p>
+Sandstone paving solutions are suitable for pathways, courtyards,
+public plazas, and private landscapes, combining durability with
+natural slip resistance and architectural harmony.
+</p>
+
+</div>
+
 </section>
 
-<!-- Application 3 -->
+
+<!-- APPLICATION 3 -->
+
 <section class="application">
-    <img src="https://images.unsplash.com/photo-1600566752227-8fbd67f2e1f1?auto=format&fit=crop&w=1600&q=80">
-    <div class="application-content">
-        <h2>Columns, Arches & Architectural Detailing</h2>
-        <p>
-            Bansi Paharpur Pink supports classical architectural expression,
-            including carved columns, arches, and ornamental detailing.
-        </p>
-    </div>
+
+<img src="images/Coloumn.jpg.png">
+
+<div class="application-content">
+
+<h2>Columns, Arches & Architectural Detailing</h2>
+
+<p>
+Bansi Paharpur Pink sandstone is particularly suited for classical
+architectural elements including carved columns, arches, cornices,
+and ornamental detailing in heritage and contemporary projects.
+</p>
+
+</div>
+
 </section>
 
-<!-- Application 4 -->
-<section class="application" style="background:white;">
-    <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1600&q=80">
-    <div class="application-content">
-        <h2>Institutional & Structural Facades</h2>
-        <p>
-            Dholpur Red is widely utilized for large-scale facades and
-            structural boundary systems requiring visual authority and performance stability.
-        </p>
-    </div>
+
+<!-- APPLICATION 4 -->
+
+<section class="application reverse">
+
+<img src="images/Institutional.jpg.png">
+
+<div class="application-content">
+
+<h2>Institutional & Structural Facades</h2>
+
+<p>
+Dholpur Red sandstone is commonly used in large-scale institutional
+buildings and monumental facades, delivering strong visual character
+combined with long-term structural performance.
+</p>
+
+</div>
+
 </section>
+
+
+<!-- CTA -->
 
 <section class="cta">
-    <a href="contact.html" class="cta-btn">
-        Discuss Application Requirements
-    </a>
+
+<a href="Contact.html" class="cta-btn">
+
+Discuss Application Requirements
+
+</a>
+
 </section>
 
+
 <div class="footer">
-    © 2026 ANAY Premium Stone | Sarmathura, Dholpur, Rajasthan, India
+
+© 2026 ANAY Premium Stone | Sarmathura, Dholpur, Rajasthan, India
+
 </div>
 
 </body>
+
 </html>
