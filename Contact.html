@@ -329,160 +329,62 @@ header { padding-right:8% !important; padding-left:0 !important; height:100px !i
 @media(max-width:768px) {
 
 header {
-    padding-right:5% !important;
-    padding-left:5% !important;
-    height:80px !important;
+    padding:10px 3% !important;
+    height:auto !important;
     flex-wrap:wrap;
 }
 
+.logo {
+    width:100%;
+    display:flex;
+    justify-content:center;
+    margin-bottom:5px;
+}
+
 .logo img {
-    height:180px;
+    height:100px;
 }
 
 nav {
-    display:none;
-    position:absolute;
-    top:80px;
-    left:0;
-    right:0;
-    background:white;
-    flex-direction:column;
     width:100%;
-    box-shadow:0 4px 6px rgba(0,0,0,0.1);
-}
-
-nav.active {
     display:flex;
+    justify-content:center;
+    gap:5px;
+    flex-wrap:wrap;
 }
 
 nav a {
-    margin:15px 5%;
-    padding:10px 0;
-    border-bottom:1px solid #eee;
-    text-align:left;
+    margin:0 3px;
+    padding:5px 8px;
+    font-size:11px;
+    border-bottom:none;
+    text-align:center;
 }
 
 .dropdown-content {
-    position:static;
     display:none;
-    box-shadow:none;
-    background:#f9f9f9;
-    min-width:100%;
-}
-
-.dropdown:hover .dropdown-content {
-    display:block;
 }
 
 .hero {
-    padding:60px 5%;
-    margin-top:20px;
+    padding:40px 5%;
+    margin-top:100px;
 }
 
 .hero h1 {
-    font-size:32px;
+    font-size:24px;
 }
 
 .hero p {
-    font-size:16px;
+    font-size:13px;
 }
 
 .divider {
-    margin:40px auto;
+    margin:30px auto;
+    width:60px;
 }
 
 .trust, .contact-info, .form-section {
-    padding:60px 5%;
-}
-
-.trust h2, .contact-info h2 {
-    font-size:24px;
-    margin-bottom:20px;
-}
-
-.trust ul {
-    max-width:100%;
-}
-
-.trust li {
-    margin:10px 0;
-    font-size:14px;
-}
-
-.button-group {
-    gap:20px;
-    flex-direction:column;
-    align-items:center;
-}
-
-.action-link {
-    gap:15px;
-    font-size:12px;
-    flex-direction:column;
-}
-
-.action-link svg {
-    width:20px;
-    height:20px;
-}
-
-input, textarea, select {
-    padding:12px;
-    font-size:16px;
-}
-
-.submit-btn {
-    padding:14px 30px;
-    font-size:13px;
-    width:100%;
-}
-
-.social-icons {
-    right:15px;
-    bottom:15px;
-    gap:10px;
-}
-
-.social-icons a {
-    width:45px;
-    height:45px;
-    font-size:18px;
-}
-
-.footer {
-    padding:30px 5%;
-    font-size:12px;
-}
-
-}
-
-@media(max-width:480px) {
-
-header {
-    padding-right:3% !important;
-    padding-left:3% !important;
-    height:70px !important;
-}
-
-.logo img {
-    height:150px;
-}
-
-.hero {
-    padding:40px 3%;
-    margin-top:20px;
-}
-
-.hero h1 {
-    font-size:24px;
-}
-
-.hero p {
-    font-size:14px;
-}
-
-.trust, .contact-info, .form-section {
-    padding:40px 3%;
+    padding:40px 5%;
 }
 
 .trust h2, .contact-info h2 {
@@ -490,12 +392,25 @@ header {
     margin-bottom:15px;
 }
 
+.trust ul {
+    max-width:100%;
+}
+
+.trust li {
+    margin:8px 0;
+    font-size:12px;
+}
+
 .button-group {
     gap:15px;
+    flex-direction:column;
+    align-items:center;
 }
 
 .action-link {
+    gap:10px;
     font-size:11px;
+    flex-direction:column;
 }
 
 .action-link svg {
@@ -510,6 +425,8 @@ input, textarea, select {
 
 .submit-btn {
     padding:12px 20px;
+    font-size:12px;
+    width:100%;
 }
 
 .social-icons {
@@ -522,6 +439,120 @@ input, textarea, select {
     width:40px;
     height:40px;
     font-size:16px;
+}
+
+.footer {
+    padding:20px 5%;
+    font-size:11px;
+}
+
+}
+
+}
+
+@media(max-width:480px) {
+
+header {
+    padding:8px 3% !important;
+    height:auto !important;
+    flex-wrap:wrap;
+}
+
+.logo {
+    width:100%;
+    display:flex;
+    justify-content:center;
+    margin-bottom:3px;
+}
+
+.logo img {
+    height:70px;
+}
+
+nav {
+    width:100%;
+    display:flex;
+    justify-content:center;
+    gap:2px;
+    flex-wrap:wrap;
+}
+
+nav a {
+    margin:0 2px;
+    padding:3px 5px;
+    font-size:9px;
+}
+
+.hero {
+    padding:30px 3%;
+    margin-top:90px;
+}
+
+.hero h1 {
+    font-size:20px;
+}
+
+.hero p {
+    font-size:12px;
+}
+
+.divider {
+    margin:20px auto;
+    width:50px;
+}
+
+.trust, .contact-info, .form-section {
+    padding:30px 3%;
+}
+
+.trust h2, .contact-info h2 {
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.trust li {
+    font-size:11px;
+}
+
+.button-group {
+    gap:10px;
+}
+
+.action-link {
+    font-size:10px;
+}
+
+.action-link svg {
+    width:16px;
+    height:16px;
+}
+
+input, textarea, select {
+    padding:8px;
+    font-size:14px;
+}
+
+.submit-btn {
+    padding:10px 15px;
+    font-size:11px;
+    width:100%;
+}
+
+.social-icons {
+    right:8px;
+    bottom:8px;
+    gap:6px;
+}
+
+.social-icons a {
+    width:35px;
+    height:35px;
+    font-size:14px;
+}
+
+.footer {
+    padding:15px 3%;
+    font-size:10px;
 }
 
 }
