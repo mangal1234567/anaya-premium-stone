@@ -313,6 +313,208 @@ header { padding-right:8% !important; padding-left:0 !important; height:100px !i
     display: block;
 }
 
+/* MOBILE RESPONSIVENESS */
+
+@media(max-width:768px) {
+
+header {
+    padding-right:5% !important;
+    padding-left:5% !important;
+    height:80px !important;
+    flex-wrap:wrap;
+}
+
+.logo img {
+    height:180px;
+}
+
+nav {
+    display:none;
+    position:absolute;
+    top:80px;
+    left:0;
+    right:0;
+    background:white;
+    flex-direction:column;
+    width:100%;
+    box-shadow:0 4px 6px rgba(0,0,0,0.1);
+}
+
+nav.active {
+    display:flex;
+}
+
+nav a {
+    margin:15px 5%;
+    padding:10px 0;
+    border-bottom:1px solid #eee;
+    text-align:left;
+}
+
+.dropdown-content {
+    position:static;
+    display:none;
+    box-shadow:none;
+    background:#f9f9f9;
+    min-width:100%;
+}
+
+.dropdown:hover .dropdown-content {
+    display:block;
+}
+
+.hero {
+    padding:60px 5%;
+    margin-top:20px;
+}
+
+.hero h1 {
+    font-size:32px;
+}
+
+.hero p {
+    font-size:16px;
+}
+
+.divider {
+    margin:40px auto;
+}
+
+.trust, .contact-info, .form-section {
+    padding:60px 5%;
+}
+
+.trust h2, .contact-info h2 {
+    font-size:24px;
+    margin-bottom:20px;
+}
+
+.trust ul {
+    max-width:100%;
+}
+
+.trust li {
+    margin:10px 0;
+    font-size:14px;
+}
+
+.button-group {
+    gap:20px;
+    flex-direction:column;
+    align-items:center;
+}
+
+.action-link {
+    gap:15px;
+    font-size:12px;
+    flex-direction:column;
+}
+
+.action-link svg {
+    width:20px;
+    height:20px;
+}
+
+input, textarea, select {
+    padding:12px;
+    font-size:16px;
+}
+
+.submit-btn {
+    padding:14px 30px;
+    font-size:13px;
+    width:100%;
+}
+
+.social-icons {
+    right:15px;
+    bottom:15px;
+    gap:10px;
+}
+
+.social-icons a {
+    width:45px;
+    height:45px;
+    font-size:18px;
+}
+
+.footer {
+    padding:30px 5%;
+    font-size:12px;
+}
+
+}
+
+@media(max-width:480px) {
+
+header {
+    padding-right:3% !important;
+    padding-left:3% !important;
+    height:70px !important;
+}
+
+.logo img {
+    height:150px;
+}
+
+.hero {
+    padding:40px 3%;
+    margin-top:20px;
+}
+
+.hero h1 {
+    font-size:24px;
+}
+
+.hero p {
+    font-size:14px;
+}
+
+.trust, .contact-info, .form-section {
+    padding:40px 3%;
+}
+
+.trust h2, .contact-info h2 {
+    font-size:20px;
+    margin-bottom:15px;
+}
+
+.button-group {
+    gap:15px;
+}
+
+.action-link {
+    font-size:11px;
+}
+
+.action-link svg {
+    width:18px;
+    height:18px;
+}
+
+input, textarea, select {
+    padding:10px;
+    font-size:15px;
+}
+
+.submit-btn {
+    padding:12px 20px;
+}
+
+.social-icons {
+    right:10px;
+    bottom:10px;
+    gap:8px;
+}
+
+.social-icons a {
+    width:40px;
+    height:40px;
+    font-size:16px;
+}
+
+}
+
 </style>
 </head>
 
