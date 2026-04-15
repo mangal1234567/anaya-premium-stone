@@ -684,6 +684,8 @@ Request Technical Datasheet & Project Supply Details
 function highlightActiveMenu() {
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     const navLinks = document.querySelectorAll('nav a');
+    const productPages = ['Dholpur Beige.html', 'Dholpur red.html', 'Bansi Paharpur Pink.html'];
+    
     navLinks.forEach(link => {
         const href = link.getAttribute('href');
         if (href === currentPage || (currentPage === '' && href === 'index.html')) {
@@ -692,6 +694,14 @@ function highlightActiveMenu() {
             link.classList.remove('active');
         }
     });
+    
+    // Highlight Products dropdown if on a product page
+    if (productPages.includes(currentPage)) {
+        const dropbtn = document.querySelector('.dropbtn');
+        if (dropbtn) {
+            dropbtn.classList.add('active');
+        }
+    }
 }
 highlightActiveMenu();
 </script>
