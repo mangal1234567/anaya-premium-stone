@@ -42,6 +42,17 @@ text-decoration:none;
 margin-left:35px;
 font-size:13px;
 color:#2c2c2c;
+padding-bottom:5px;
+transition:0.3s ease;
+}
+
+nav a.active{
+color:#b98c8c;
+border-bottom:2px solid #b98c8c;
+}
+
+nav a:hover{
+color:#b98c8c;
 }
 
 /* HERO */
@@ -499,6 +510,23 @@ Dholpur Beige Sandstone Manufacturer & Exporter
 Sarmathura, Dholpur, Rajasthan, India
 
 </div>
+
+<script>
+// Highlight active menu
+function highlightActiveMenu() {
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const navLinks = document.querySelectorAll('nav a');
+    navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+}
+highlightActiveMenu();
+</script>
 
 </body>
 </html>

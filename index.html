@@ -46,6 +46,17 @@
             text-decoration: none;
             font-size: 13px;
             color: #2c2c2c;
+            padding-bottom: 5px;
+            transition: 0.3s ease;
+        }
+
+        nav a.active {
+            color: #b98c8c;
+            border-bottom: 2px solid #b98c8c;
+        }
+
+        nav a:hover {
+            color: #b98c8c;
         }
 
         /* HERO */
@@ -867,6 +878,21 @@ header { padding-right:8% !important; padding-left:0 !important; height:100px !i
         document.querySelector('.prev').addEventListener('click', prevSlide);
 
         setInterval(nextSlide, 3000); // auto change every 3 seconds
+
+        // Highlight active menu
+        function highlightActiveMenu() {
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        }
+        highlightActiveMenu();
 
     </script>
 
