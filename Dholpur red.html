@@ -46,6 +46,17 @@ text-decoration:none;
 margin-left:35px;
 font-size:13px;
 color:#2c2c2c;
+padding-bottom:5px;
+transition:0.3s ease;
+}
+
+nav a.active{
+color:#b98c8c;
+border-bottom:2px solid #b98c8c;
+}
+
+nav a:hover{
+color:#b98c8c;
 }
 
 /* HERO */
@@ -53,7 +64,7 @@ color:#2c2c2c;
 .hero{
 height:85vh;
 background:linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
-url('dholpur-red-monumental-facade.jpg') center/cover no-repeat;
+url('dholpur-red-stone-building.webp') center/cover no-repeat;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -129,7 +140,7 @@ margin-top:40px;
 .spec-card{
 background:
 
-url('images/red-stone-background.png') center/cover no-repeat;
+url('images/red-stone-background.webp') center/cover no-repeat;
 padding:40px;
 border:1px solid #e8e3d8;
 color:white;
@@ -218,6 +229,195 @@ grid-template-columns:1fr;
 
 .hero h1{
 font-size:40px;
+}
+
+}
+
+@media(max-width:768px){
+
+header{
+padding:10px 3%;
+height:auto;
+flex-wrap:wrap;
+}
+
+.logo{
+width:100%;
+display:flex;
+justify-content:center;
+margin-bottom:5px;
+}
+
+.logo img{
+height:80px;
+}
+
+nav{
+width:100%;
+display:flex;
+justify-content:center;
+gap:5px;
+flex-wrap:wrap;
+}
+
+nav a{
+margin-left:0;
+margin-right:3px;
+font-size:11px;
+padding:5px 8px;
+}
+
+.hero{
+height:auto;
+min-height:40vh;
+padding:40px 5%;
+margin-top:100px;
+}
+
+.hero h1{
+font-size:22px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:12px;
+}
+
+.section{
+padding:40px 5%;
+}
+
+.section h2{
+font-size:20px;
+}
+
+.section p{
+font-size:12px;
+}
+
+.app-grid, .spec-grid{
+grid-template-columns:1fr;
+gap:15px;
+}
+
+.app-item img{
+height:180px;
+}
+
+.app-item h3{
+font-size:15px;
+margin-top:8px;
+}
+
+.spec-card{
+padding:20px;
+}
+
+.spec-card h3{
+font-size:14px;
+margin-bottom:12px;
+}
+
+.spec-card li{
+font-size:12px;
+margin-bottom:6px;
+}
+
+.cta-btn{
+padding:12px 20px;
+font-size:11px;
+}
+
+.footer{
+padding:20px 5%;
+font-size:11px;
+}
+
+}
+
+@media(max-width:480px){
+
+header{
+padding:8px 3%;
+height:auto;
+flex-wrap:wrap;
+}
+
+.logo{
+width:100%;
+display:flex;
+justify-content:center;
+margin-bottom:3px;
+}
+
+.logo img{
+height:60px;
+}
+
+nav{
+width:100%;
+display:flex;
+justify-content:center;
+gap:2px;
+flex-wrap:wrap;
+}
+
+nav a{
+margin-left:0;
+margin-right:2px;
+font-size:9px;
+padding:3px 5px;
+}
+
+.hero{
+padding:30px 3%;
+margin-top:90px;
+}
+
+.hero h1{
+font-size:18px;
+}
+
+.hero p{
+font-size:12px;
+}
+
+.section{
+padding:40px 3%;
+}
+
+.section h2{
+font-size:20px;
+}
+
+.section p{
+font-size:13px;
+}
+
+.app-item img{
+height:150px;
+}
+
+.spec-card{
+padding:20px;
+}
+
+.spec-card h3{
+font-size:14px;
+}
+
+.spec-card li{
+font-size:12px;
+}
+
+.cta-btn{
+padding:12px 20px;
+font-size:11px;
+}
+
+.footer{
+padding:20px 3%;
+font-size:11px;
 }
 
 }
@@ -367,7 +567,7 @@ campuses, railway infrastructure and public institutional buildings.
 </div>
 
 <div class="app-item">
-<img src="images/university-sandstone.webp" alt="Dholpur Red Sandstone University Campus Architecture">
+<img src="images/University-sandstone.webp" alt="Dholpur Red Sandstone University Campus Architecture">
 <h3>University Campuses</h3>
 </div>
 
@@ -481,7 +681,7 @@ View Full Technical Specifications
 
 <section class="cta">
 
-<a href="Contact.html" class="cta-btn">
+<a href="Contact.html#contact-info" class="cta-btn">
 Request Technical Datasheet & Project Supply Details
 </a>
 
@@ -515,6 +715,33 @@ Request Technical Datasheet & Project Supply Details
 }
 }
 }
+</script>
+
+<script>
+// Highlight active menu
+function highlightActiveMenu() {
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const navLinks = document.querySelectorAll('nav a');
+    const productPages = ['Dholpur Beige.html', 'Dholpur red.html', 'Bansi Paharpur Pink.html'];
+    
+    navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+    
+    // Highlight Products dropdown if on a product page
+    if (productPages.includes(currentPage)) {
+        const dropbtn = document.querySelector('.dropbtn');
+        if (dropbtn) {
+            dropbtn.classList.add('active');
+        }
+    }
+}
+highlightActiveMenu();
 </script>
 
 </body>

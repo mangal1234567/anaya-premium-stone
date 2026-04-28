@@ -52,6 +52,17 @@ text-decoration:none;
 margin-left:35px;
 font-size:13px;
 color:#2c2c2c;
+padding-bottom:5px;
+transition:0.3s ease;
+}
+
+nav a.active{
+color:#b98c8c;
+border-bottom:2px solid #b98c8c;
+}
+
+nav a:hover{
+color:#b98c8c;
 }
 
 /* Hero */
@@ -313,6 +324,239 @@ header { padding-right:8% !important; padding-left:0 !important; height:100px !i
     display: block;
 }
 
+/* MOBILE RESPONSIVENESS */
+
+@media(max-width:768px) {
+
+header {
+    padding:10px 3% !important;
+    height:auto !important;
+    flex-wrap:wrap;
+}
+
+.logo {
+    width:100%;
+    display:flex;
+    justify-content:center;
+    margin-bottom:5px;
+}
+
+.logo img {
+    height:100px;
+}
+
+nav {
+    width:100%;
+    display:flex;
+    justify-content:center;
+    gap:5px;
+    flex-wrap:wrap;
+}
+
+nav a {
+    margin:0 3px;
+    padding:5px 8px;
+    font-size:11px;
+    border-bottom:none;
+    text-align:center;
+}
+
+.dropdown-content {
+    display:none;
+}
+
+.hero {
+    padding:40px 5%;
+    margin-top:100px;
+}
+
+.hero h1 {
+    font-size:24px;
+}
+
+.hero p {
+    font-size:13px;
+}
+
+.divider {
+    margin:30px auto;
+    width:60px;
+}
+
+.trust, .contact-info, .form-section {
+    padding:40px 5%;
+}
+
+.trust h2, .contact-info h2 {
+    font-size:20px;
+    margin-bottom:15px;
+}
+
+.trust ul {
+    max-width:100%;
+}
+
+.trust li {
+    margin:8px 0;
+    font-size:12px;
+}
+
+.button-group {
+    gap:15px;
+    flex-direction:column;
+    align-items:center;
+}
+
+.action-link {
+    gap:10px;
+    font-size:11px;
+    flex-direction:column;
+}
+
+.action-link svg {
+    width:18px;
+    height:18px;
+}
+
+input, textarea, select {
+    padding:10px;
+    font-size:15px;
+}
+
+.submit-btn {
+    padding:12px 20px;
+    font-size:12px;
+    width:100%;
+}
+
+.social-icons {
+    right:10px;
+    bottom:10px;
+    gap:8px;
+}
+
+.social-icons a {
+    width:40px;
+    height:40px;
+    font-size:16px;
+}
+
+.footer {
+    padding:20px 5%;
+    font-size:11px;
+}
+
+}
+
+}
+
+@media(max-width:480px) {
+
+header {
+    padding:8px 3% !important;
+    height:auto !important;
+    flex-wrap:wrap;
+}
+
+.logo {
+    width:100%;
+    display:flex;
+    justify-content:center;
+    margin-bottom:3px;
+}
+
+.logo img {
+    height:70px;
+}
+
+nav {
+    width:100%;
+    display:flex;
+    justify-content:center;
+    gap:2px;
+    flex-wrap:wrap;
+}
+
+nav a {
+    margin:0 2px;
+    padding:3px 5px;
+    font-size:9px;
+}
+
+.hero {
+    padding:30px 3%;
+    margin-top:90px;
+}
+
+.hero h1 {
+    font-size:20px;
+}
+
+.hero p {
+    font-size:12px;
+}
+
+.divider {
+    margin:20px auto;
+    width:50px;
+}
+
+.trust, .contact-info, .form-section {
+    padding:30px 3%;
+}
+
+.trust h2, .contact-info h2 {
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.trust li {
+    font-size:11px;
+}
+
+.button-group {
+    gap:10px;
+}
+
+.action-link {
+    font-size:10px;
+}
+
+.action-link svg {
+    width:16px;
+    height:16px;
+}
+
+input, textarea, select {
+    padding:8px;
+    font-size:14px;
+}
+
+.submit-btn {
+    padding:10px 15px;
+    font-size:11px;
+    width:100%;
+}
+
+.social-icons {
+    right:8px;
+    bottom:8px;
+    gap:6px;
+}
+
+.social-icons a {
+    width:35px;
+    height:35px;
+    font-size:14px;
+}
+
+.footer {
+    padding:15px 3%;
+    font-size:10px;
+}
+
+}
+
 </style>
 </head>
 
@@ -378,7 +622,7 @@ Trusted by Architects, Builders & Importers Worldwide
 
 <hr class="divider">
 
-<section class="contact-info">
+<section class="contact-info" id="contact-info">
 
 <h2>Connect With ANAY Premium Stone</h2>
 
@@ -424,16 +668,13 @@ DOWNLOAD CATALOGUE
 </div>
 <hr class="divider">
 
-<section class="form-section">
+<section class="form-section" id="form-section">
 
 <h2 style="font-family:'Playfair Display',serif;margin-bottom:50px;">
 Submit your details and our team will contact you to discuss your sandstone requirements.
 </h2>
 
-<form action="https://api.web3forms.com/submit" method="POST">
-
-<!-- Web3Forms Access Key -->
-<input type="hidden" name="access_key" value="82f4b868-870f-4460-89c4-bfbb0df04325">
+<form action="YOUR_GOOGLE_APPS_SCRIPT_URL_HERE" method="POST">
 
 <div class="form-group">
 <input type="text" name="name" placeholder="Full Name" required>
@@ -541,6 +782,31 @@ $('#countrycode').select2({
 placeholder: "Search Country or Code"
 });
 });
+
+// Highlight active menu
+function highlightActiveMenu() {
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const navLinks = document.querySelectorAll('nav a');
+    const productPages = ['Dholpur Beige.html', 'Dholpur red.html', 'Bansi Paharpur Pink.html'];
+    
+    navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+    
+    // Highlight Products dropdown if on a product page
+    if (productPages.includes(currentPage)) {
+        const dropbtn = document.querySelector('.dropbtn');
+        if (dropbtn) {
+            dropbtn.classList.add('active');
+        }
+    }
+}
+highlightActiveMenu();
 
 </script>
 

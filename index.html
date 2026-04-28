@@ -46,6 +46,17 @@
             text-decoration: none;
             font-size: 13px;
             color: #2c2c2c;
+            padding-bottom: 5px;
+            transition: 0.3s ease;
+        }
+
+        nav a.active {
+            color: #b98c8c;
+            border-bottom: 2px solid #b98c8c;
+        }
+
+        nav a:hover {
+            color: #b98c8c;
         }
 
         /* HERO */
@@ -338,6 +349,257 @@
 
         }
 
+        @media(max-width:768px) {
+
+            header {
+                padding: 10px 3% !important;
+                height: auto !important;
+                flex-wrap: wrap;
+                position: fixed;
+            }
+
+            .logo {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                margin-bottom: 5px;
+            }
+
+            .logo img {
+                height: 80px;
+            }
+
+            nav {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                gap: 5px;
+                flex-wrap: wrap;
+            }
+
+            nav a {
+                margin-left: 0;
+                margin-right: 5px;
+                font-size: 11px;
+                padding: 5px 8px;
+            }
+
+            .hero {
+                margin-top: 150px;
+                height: auto;
+                min-height: 50vh;
+                padding: 60px 5%;
+            }
+
+            .hero-content {
+                padding: 0 10px;
+            }
+
+            .hero h1 {
+                font-size: 24px;
+                margin-bottom: 15px;
+            }
+
+            .hero p {
+                font-size: 13px;
+                margin-bottom: 20px;
+            }
+
+            .slider-btn {
+                padding: 8px 12px;
+                font-size: 20px;
+            }
+
+            .section {
+                padding: 40px 5%;
+            }
+
+            .section h2 {
+                font-size: 22px;
+                margin-bottom: 20px;
+            }
+
+            .section p {
+                font-size: 13px;
+            }
+
+            .split-grid, .collection-grid, .app-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .split-item img, .collection-item img, .app-item img {
+                height: 200px;
+            }
+
+            .split-item h3, .collection-item h3, .app-item h3 {
+                font-size: 15px;
+                margin-top: 10px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+            }
+
+            .btn {
+                padding: 12px 20px;
+                font-size: 11px;
+                width: 100%;
+            }
+
+            .btn-primary {
+                padding: 12px 20px;
+                width: 100%;
+            }
+
+            .catalogue-btn {
+                padding: 12px 20px;
+                font-size: 11px;
+                width: 100%;
+            }
+
+            .project-btn {
+                padding: 12px 20px;
+                font-size: 11px;
+                width: 100%;
+            }
+
+            .footer {
+                padding: 20px 5%;
+                font-size: 11px;
+            }
+
+        }
+
+        @media(max-width:480px) {
+
+            header {
+                padding: 8px 3% !important;
+                height: auto !important;
+                flex-wrap: wrap;
+            }
+
+            .logo {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                margin-bottom: 3px;
+            }
+
+            .logo img {
+                height: 60px;
+            }
+
+            nav {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                gap: 2px;
+                flex-wrap: wrap;
+            }
+
+            nav a {
+                margin-left: 0;
+                margin-right: 3px;
+                font-size: 10px;
+                padding: 3px 5px;
+            }
+
+            .hero {
+                margin-top: 120px;
+                height: auto;
+                min-height: 40vh;
+                padding: 30px 3%;
+            }
+
+            .hero-content {
+                padding: 0 5px;
+            }
+
+            .hero h1 {
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+
+            .hero p {
+                font-size: 11px;
+                margin-bottom: 15px;
+            }
+
+            .slider-btn {
+                padding: 6px 10px;
+                font-size: 16px;
+            }
+
+            .section {
+                padding: 30px 3%;
+            }
+
+            .section h2 {
+                font-size: 18px;
+                margin-bottom: 15px;
+            }
+
+            .section p {
+                font-size: 12px;
+            }
+
+            .split-grid, .collection-grid, .app-grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .split-item img, .collection-item img, .app-item img {
+                height: 150px;
+            }
+
+            .split-item h3, .collection-item h3, .app-item h3 {
+                font-size: 13px;
+                margin-top: 8px;
+            }
+
+            .split-item p, .collection-item p {
+                font-size: 11px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                gap: 8px;
+                width: 100%;
+            }
+
+            .btn {
+                padding: 10px 15px;
+                font-size: 10px;
+                width: 100%;
+            }
+
+            .btn-primary {
+                padding: 10px 15px;
+                width: 100%;
+            }
+
+            .catalogue-btn {
+                padding: 10px 15px;
+                font-size: 10px;
+                width: 100%;
+            }
+
+            .project-btn {
+                padding: 10px 15px;
+                font-size: 10px;
+                width: 100%;
+            }
+
+            .footer {
+                padding: 15px 3%;
+                font-size: 10px;
+            }
+
+        }
+
         /* Dropdown CSS */
         .dropdown {
             position: relative;
@@ -435,10 +697,10 @@ header { padding-right:8% !important; padding-left:0 !important; height:100px !i
 
         <div class="hero-slider">
 
-            <div class="slide active" style="background-image:url('images/dholpur-bieige villa.png')"></div>
-            <div class="slide" style="background-image:url('images/dholpur-red-stone-building.png')"></div>
-            <div class="slide" style="background-image:url('images/pink-sandstone-ram-mandir.png')"></div>
-            <div class="slide" style="background-image:url('images/land-scaping-cladding.png')"></div>
+            <div class="slide active" style="background-image:url('images/dholpur-bieige villa.webp')"></div>
+            <div class="slide" style="background-image:url('images/dholpur-red-stone-building.webp')"></div>
+            <div class="slide" style="background-image:url('images/pink-sandstone-ram-mandir.webp')"></div>
+            <div class="slide" style="background-image:url('images/land-scaping-cladding.webp')"></div>
 
             <button class="slider-btn prev">&#10094;</button>
             <button class="slider-btn next">&#10095;</button>
@@ -457,8 +719,8 @@ header { padding-right:8% !important; padding-left:0 !important; height:100px !i
             </p>
 
             <div class="hero-buttons">
-                <a href="#" class="btn btn-primary">VIEW STONE COLLECTION</a>
-                <a href="#" class="btn">DISCUSS BULK SUPPLY</a>
+                <a href="#collection" class="btn btn-primary">VIEW STONE COLLECTION</a>
+                <a href="Contact.html#contact-info" class="btn">DISCUSS BULK SUPPLY</a>
             </div>
 
         </div>
@@ -498,7 +760,7 @@ header { padding-right:8% !important; padding-left:0 !important; height:100px !i
 
     <!-- COLLECTION -->
 
-    <section class="collection">
+    <section class="collection" id="collection">
 
         <h2>Sandstone Collection</h2>
 
@@ -683,7 +945,7 @@ header { padding-right:8% !important; padding-left:0 !important; height:100px !i
 
         <h2>Download Sandstone Catalogue</h2>
 
-        <button class="catalogue-btn" onclick="window.location.href='anay-premium-stone-sandstone-catalogue.pdf'">
+        <button class="catalogue-btn" onclick="window.location.href='anay-catalogue.pdf'">
             DOWNLOAD CATALOGUE
         </button>
 
@@ -703,7 +965,7 @@ header { padding-right:8% !important; padding-left:0 !important; height:100px !i
 
         <p>Discuss project specifications and supply capability with our team.</p>
 
-        <a href="#" class="project-btn">SUBMIT PROJECT INQUIRY</a>
+        <a href="Contact.html#form-section" class="project-btn">SUBMIT PROJECT INQUIRY</a>
 
     </section>
 
@@ -738,6 +1000,31 @@ header { padding-right:8% !important; padding-left:0 !important; height:100px !i
         document.querySelector('.prev').addEventListener('click', prevSlide);
 
         setInterval(nextSlide, 3000); // auto change every 3 seconds
+
+        // Highlight active menu
+        function highlightActiveMenu() {
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            const navLinks = document.querySelectorAll('nav a');
+            const productPages = ['Dholpur Beige.html', 'Dholpur red.html', 'Bansi Paharpur Pink.html'];
+            
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+            
+            // Highlight Products dropdown if on a product page
+            if (productPages.includes(currentPage)) {
+                const dropbtn = document.querySelector('.dropbtn');
+                if (dropbtn) {
+                    dropbtn.classList.add('active');
+                }
+            }
+        }
+        highlightActiveMenu();
 
     </script>
 

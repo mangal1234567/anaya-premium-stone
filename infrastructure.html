@@ -46,6 +46,17 @@ text-decoration:none;
 margin-left:35px;
 font-size:13px;
 color:#2c2c2c;
+padding-bottom:5px;
+transition:0.3s ease;
+}
+
+nav a.active{
+color:#b98c8c;
+border-bottom:2px solid #b98c8c;
+}
+
+nav a:hover{
+color:#b98c8c;
 }
 
 /* HERO */
@@ -230,6 +241,196 @@ font-size:38px;
 
 }
 
+@media(max-width:768px){
+
+header{
+padding:10px 3%;
+height:auto;
+flex-wrap:wrap;
+}
+
+.logo{
+width:100%;
+display:flex;
+justify-content:center;
+margin-bottom:5px;
+}
+
+.logo img{
+height:80px;
+}
+
+nav{
+width:100%;
+display:flex;
+justify-content:center;
+gap:5px;
+flex-wrap:wrap;
+}
+
+nav a{
+margin:0;
+font-size:11px;
+padding:5px 8px;
+}
+
+.hero{
+padding:40px 5%;
+margin-top:100px;
+}
+
+.hero h1{
+font-size:22px;
+}
+
+.hero p{
+font-size:12px;
+}
+
+.split{
+flex-direction:column;
+gap:30px;
+padding:40px 5%;
+}
+
+.split.reverse{
+flex-direction:column;
+}
+
+.split img{
+width:100%;
+height:300px;
+}
+
+.split-text{
+width:100%;
+}
+
+.split-text h2{
+font-size:20px;
+margin-bottom:15px;
+}
+
+.split-text p{
+font-size:12px;
+}
+
+.dark h2{
+font-size:20px;
+margin-bottom:20px;
+}
+
+.dark{
+padding:40px 5%;
+}
+
+.cta-btn{
+padding:12px 20px;
+font-size:11px;
+}
+
+.footer{
+padding:20px 5%;
+font-size:11px;
+}
+
+}
+
+@media(max-width:480px){
+
+header{
+padding:8px 3%;
+height:auto;
+flex-wrap:wrap;
+}
+
+.logo{
+width:100%;
+display:flex;
+justify-content:center;
+margin-bottom:3px;
+}
+
+.logo img{
+height:60px;
+}
+
+nav{
+width:100%;
+display:flex;
+justify-content:center;
+gap:2px;
+flex-wrap:wrap;
+}
+
+nav a{
+font-size:9px;
+padding:3px 5px;
+margin:0;
+}
+
+.hero{
+padding:30px 3%;
+margin-top:90px;
+}
+
+.hero h1{
+font-size:18px;
+}
+
+.hero p{
+font-size:11px;
+}
+
+.split{
+flex-direction:column;
+gap:20px;
+padding:30px 3%;
+}
+
+.split.reverse{
+flex-direction:column;
+}
+
+.split img{
+width:100%;
+height:250px;
+}
+
+.split-text{
+width:100%;
+}
+
+.split-text h2{
+font-size:18px;
+margin-bottom:12px;
+}
+
+.split-text p{
+font-size:11px;
+}
+
+.dark h2{
+font-size:18px;
+margin-bottom:15px;
+}
+
+.dark{
+padding:30px 3%;
+}
+
+.cta-btn{
+padding:10px 15px;
+font-size:10px;
+}
+
+.footer{
+padding:15px 3%;
+font-size:10px;
+}
+
+}
+
 
 /* About1 logo & header overrides */
 .logo img{
@@ -377,7 +578,7 @@ Europe, and Australia.
 
 <section class="cta">
 
-<a href="Contact.html" class="cta-btn">
+<a href="Contact.html#contact-info" class="cta-btn">
 Discuss Your Project Requirements
 </a>
 
@@ -389,6 +590,33 @@ Discuss Your Project Requirements
 Sarmathura, Dholpur, Rajasthan, India
 
 </div>
+
+<script>
+// Highlight active menu
+function highlightActiveMenu() {
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const navLinks = document.querySelectorAll('nav a');
+    const productPages = ['Dholpur Beige.html', 'Dholpur red.html', 'Bansi Paharpur Pink.html'];
+    
+    navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+    
+    // Highlight Products dropdown if on a product page
+    if (productPages.includes(currentPage)) {
+        const dropbtn = document.querySelector('.dropbtn');
+        if (dropbtn) {
+            dropbtn.classList.add('active');
+        }
+    }
+}
+highlightActiveMenu();
+</script>
 
 </body>
 </html>
