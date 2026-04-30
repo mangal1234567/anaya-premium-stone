@@ -674,14 +674,14 @@ DOWNLOAD CATALOGUE
 Submit your details and our team will contact you to discuss your sandstone requirements.
 </h2>
 
-<form action="https://script.google.com/u/0/home/projects/1bmzO7jsfywaTGBJ_0AnrV3jjhHLnFWduq631urV3kvkiMauDH6bvrMpy/edit" method="POST">
+<form action="https://script.google.com/macros/s/AKfycbw-INKDqVNJn9UDJeosj9AVac6P50lM7ohsm5R8aWuewhbpxkWPsD1n68N9cQrYyrpL/exec" method="POST">
 
 <div class="form-group">
 <input type="text" name="name" placeholder="Full Name" required>
 </div>
 
 <div class="form-group">
-<input type="text" name="Company Name" placeholder="Company Name" required>
+<input type="text" name="Company" placeholder="Company" required>
 </div>
 
 <div class="form-group">
@@ -690,7 +690,7 @@ Submit your details and our team will contact you to discuss your sandstone requ
 
 <div class="form-group">
 
-<select id="countrycode" name="Country Code" style="width:100%" required>
+<select id="countrycode" name="CountryCode" style="width:100%" required>
 
 <option value="">Search Country or Code</option>
 
@@ -734,11 +734,11 @@ Submit your details and our team will contact you to discuss your sandstone requ
 </div>
 
 <div class="form-group">
-<input type="tel" name="Phone Number" placeholder="Phone / WhatsApp Number" required>
+<input type="tel" name="Phone" placeholder="Phone / WhatsApp Number" required>
 </div>
 
 <div class="form-group">
-<select name="Project Type" required>
+<select name="Project_Type" required>
 <option value="">Project Type</option>
 <option>Residential</option>
 <option>Commercial</option>
@@ -753,6 +753,9 @@ Submit your details and our team will contact you to discuss your sandstone requ
 
 <div class="form-group">
 <button type="submit" class="submit-btn">SUBMIT</button>
+<p id="form-msg" style="margin-top:15px;color:green;display:none;">
+Your enquiry has been submitted successfully.
+</p>
 </div>
 
 </form>
@@ -809,6 +812,25 @@ function highlightActiveMenu() {
 highlightActiveMenu();
 
 </script>
+<script>
 
+const form = document.querySelector("form");
+
+form.addEventListener("submit", function(e){
+  e.preventDefault();
+
+  fetch(form.action, {
+    method: "POST",
+    body: new FormData(form)
+  })
+  .then(res => {
+    document.getElementById("form-msg").style.display = "block";
+    form.reset();
+  })
+  .catch(err => alert("Error submitting form"));
+
+});
+
+</script>
 </body>
 </html>
