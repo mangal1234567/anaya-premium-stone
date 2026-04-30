@@ -690,7 +690,7 @@ Submit your details and our team will contact you to discuss your sandstone requ
 
 <div class="form-group">
 
-<select id="countrycode" name="CountryCode" style="width:100%" required>
+<select id="countrycode" name="Country_Code" style="width:100%" required>
 
 <option value="">Search Country or Code</option>
 
@@ -739,7 +739,7 @@ Submit your details and our team will contact you to discuss your sandstone requ
 
 <div class="form-group">
 <select name="Project_Type" required>
-<option value="">Project Type</option>
+<option value="">Project_Type</option>
 <option>Residential</option>
 <option>Commercial</option>
 <option>Institutional</option>
@@ -812,25 +812,6 @@ function highlightActiveMenu() {
 highlightActiveMenu();
 
 </script>
-<script>
 
-const form = document.querySelector("form");
-
-form.addEventListener("submit", function(e){
-  e.preventDefault();
-
-  fetch(form.action, {
-    method: "POST",
-    body: new FormData(form)
-  })
-  .then(res => {
-    document.getElementById("form-msg").style.display = "block";
-    form.reset();
-  })
-  .catch(err => alert("Error submitting form"));
-
-});
-
-</script>
 </body>
 </html>
