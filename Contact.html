@@ -674,7 +674,7 @@ DOWNLOAD CATALOGUE
 Submit your details and our team will contact you to discuss your sandstone requirements.
 </h2>
 
-<form action="https://script.google.com/macros/s/AKfycbwPwPcBGbIKqQhZx4Zd_VvfACA5QQdBn_8pItefXXYBpF7xdM5aN0cLvGpy1xmBAS5R/exec" method="POST">
+<form id="contact-form" action="https://script.google.com/macros/s/AKfycbwPwPcBGbIKqQhZx4Zd_VvfACA5QQdBn_8pItefXXYBpF7xdM5aN0cLvGpy1xmBAS5R/exec" method="POST">
 
 <div class="form-group">
 <input type="text" name="name" placeholder="Full Name" required>
@@ -810,6 +810,56 @@ function highlightActiveMenu() {
     }
 }
 highlightActiveMenu();
+
+const contactForm = document.getElementById('contact-form');
+const formMsg = document.getElementById('form-msg');
+const submitBtn = contactForm ? contactForm.querySelector('.submit-btn') : null;
+
+if (contactForm) {
+    contactForm.addEventListener('submit', async function(event) {
+        event.preventDefault();
+        if (!contactForm.action) return;
+
+        formMsg.style.display = 'none';
+        if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Submitting...';
+        }
+
+        const formData = new FormData(contactForm);
+
+        try {
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                mode: 'cors'
+            });
+
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+
+            contactForm.reset();
+            if (window.$ && window.$.fn && $('#countrycode').length) {
+                $('#countrycode').val('').trigger('change');
+            }
+
+            formMsg.textContent = 'Your enquiry has been submitted successfully. We will contact you soon.';
+            formMsg.style.color = 'green';
+            formMsg.style.display = 'block';
+            window.location.hash = 'form-section';
+        } catch (error) {
+            formMsg.textContent = 'There was a problem submitting your enquiry. Please try again later.';
+            formMsg.style.color = 'red';
+            formMsg.style.display = 'block';
+        } finally {
+            if (submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'SUBMIT';
+            }
+        }
+    });
+}
 
 </script>
 
