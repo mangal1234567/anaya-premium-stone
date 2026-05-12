@@ -227,6 +227,60 @@ height:46px;
 right:10px;
 }
 
+/* Success Banner Notification */
+
+.notification-banner {
+    position: fixed;
+    top: 20px;
+    right: -400px;
+    width: 350px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 1001;
+    transition: right 0.4s ease;
+    font-weight: 500;
+}
+
+.notification-banner.show {
+    right: 20px;
+}
+
+.notification-banner.success {
+    background: #d4edda;
+    color: #155724;
+    border-left: 4px solid #28a745;
+}
+
+.notification-banner.error {
+    background: #f8d7da;
+    color: #721c24;
+    border-left: 4px solid #dc3545;
+}
+
+.notification-banner .icon {
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.notification-banner .close-btn {
+    margin-left: auto;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: inherit;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.notification-banner .close-btn:hover {
+    opacity: 1;
+}
+
 /* Floating Social */
 
 .social-icons{
@@ -753,9 +807,6 @@ Submit your details and our team will contact you to discuss your sandstone requ
 
 <div class="form-group">
 <button type="submit" class="submit-btn">SUBMIT</button>
-<p id="form-msg" style="margin-top:15px;color:green;display:none;">
-Your enquiry has been submitted successfully.
-</p>
 </div>
 
 </form>
@@ -772,6 +823,12 @@ Your enquiry has been submitted successfully.
 <i class="fab fa-facebook-f"></i>
 </a>
 
+</div>
+
+<div id="notification-banner" class="notification-banner">
+    <span class="icon">✓</span>
+    <span id="notification-text">Your enquiry has been submitted successfully!</span>
+    <button class="close-btn" onclick="closeNotification()">✕</button>
 </div>
 
 <div class="footer">
@@ -811,8 +868,33 @@ function highlightActiveMenu() {
 }
 highlightActiveMenu();
 
+function showNotification(message, type = 'success') {
+    const banner = document.getElementById('notification-banner');
+    const text = document.getElementById('notification-text');
+    const icon = banner.querySelector('.icon');
+    
+    banner.classList.remove('success', 'error', 'show');
+    text.textContent = message;
+    banner.classList.add(type, 'show');
+    
+    if (type === 'error') {
+        icon.textContent = '✕';
+    } else {
+        icon.textContent = '✓';
+    }
+    
+    // Auto-hide after 5 seconds
+    setTimeout(() => {
+        closeNotification();
+    }, 5000);
+}
+
+function closeNotification() {
+    const banner = document.getElementById('notification-banner');
+    banner.classList.remove('show');
+}
+
 const contactForm = document.getElementById('contact-form');
-const formMsg = document.getElementById('form-msg');
 const submitBtn = contactForm ? contactForm.querySelector('.submit-btn') : null;
 
 if (contactForm) {
@@ -820,7 +902,6 @@ if (contactForm) {
         event.preventDefault();
         if (!contactForm.action) return;
 
-        formMsg.style.display = 'none';
         if (submitBtn) {
             submitBtn.disabled = true;
             submitBtn.textContent = 'Submitting...';
@@ -835,26 +916,18 @@ if (contactForm) {
                 mode: 'no-cors'
             });
 
-            // Success - form was sent (no-cors mode doesn't give us response details)
-            await new Promise(resolve => setTimeout(resolve, 1000));
+            // Success - form was sent
+            await new Promise(resolve => setTimeout(resolve, 800));
 
             contactForm.reset();
             if (window.$ && window.$.fn && $('#countrycode').length) {
                 $('#countrycode').val('').trigger('change');
             }
 
-            formMsg.textContent = '✓ Your enquiry has been submitted successfully. We will contact you soon.';
-            formMsg.style.color = 'green';
-            formMsg.style.display = 'block';
-            
-            // Scroll to message
-            formMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            showNotification('✓ Your enquiry has been submitted successfully. We will contact you soon!', 'success');
         } catch (error) {
             console.error('Form submission error:', error);
-            formMsg.textContent = '✗ There was a problem submitting. Please try again or email us directly.';
-            formMsg.style.color = 'red';
-            formMsg.style.display = 'block';
-            formMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            showNotification('✕ Failed to submit. Please try again or email us directly.', 'error');
         } finally {
             if (submitBtn) {
                 submitBtn.disabled = false;
